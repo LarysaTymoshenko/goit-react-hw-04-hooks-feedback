@@ -1,0 +1,13 @@
+.item {
+  display: flex;
+  justify-content: center;
+
+  text-align: left;
+  padding: 5px;
+  margin: 5px;
+}
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}

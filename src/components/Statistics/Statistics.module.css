@@ -1,0 +1,23 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.item {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: solid 1px burlywood;
+  width: 200px;
+  padding: 5px;
+  margin: 5px;
+}
+.itemName {
+  padding: 5px;
+  font-weight: bold;
+}
+.count {
+  font-size: 30px;
+  color: rgb(90, 51, 18);
+}

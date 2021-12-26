@@ -1,0 +1,13 @@
+button {
+  background-color: burlywood;
+  border: solid 1px rgb(90, 51, 18);
+  font-size: 30px;
+  border-radius: 20px;
+  width: 200px;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background: rgb(109, 78, 78);
+}
