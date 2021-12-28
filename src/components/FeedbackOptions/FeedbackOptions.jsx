@@ -19,6 +19,5 @@ export default function FeedbackOptions({ options, onIncrementFeedback }) {
 }
 
 FeedbackOptions.propTypes = {
-  // options: PropTypes.object,
   onIncrementFeedback: PropTypes.func.isRequired,
 };
