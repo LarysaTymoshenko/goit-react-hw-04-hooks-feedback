@@ -6,7 +6,7 @@ import s from "./Feedback.module.css";
 export default function FeedbackOptions({ options, onIncrementFeedback }) {
   return (
     <ul className={s.list}>
-      {options.map(([key]) => (
+      {options.map((key) => (
         <li key={key} className={s.item}>
           <Buttons
             feedbackName={key}
@@ -19,6 +19,6 @@ export default function FeedbackOptions({ options, onIncrementFeedback }) {
 }
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.array).isRequired,
+  // options: PropTypes.object,
   onIncrementFeedback: PropTypes.func.isRequired,
 };
