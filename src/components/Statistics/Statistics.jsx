@@ -2,38 +2,28 @@ import React from "react";
 import PropTypes from "prop-types";
 import s from "./Statistics.module.css";
 
-const Statistics = ({ good, neutral, bad, total, persantageFeedback }) => {
+const Statistics = ({ options, total, persantageFeedback }) => {
   return (
     <ul className={s.list}>
-      <li className={s.item}>
-        <p className={s.itemName}> Good:</p>
-        <span className={s.count}>{good} </span>
+      {Object.keys(options).map((el) => (
+        <li className={s.item} key={el}>
+          {el}: <span className={`${s.count} ${s[el]}`}>{options[el]}</span>
+        </li>
+      ))}
+      <li className={`${s.item} `}>
+        Total: <span className={`${s.count} `}>{total}</span>
       </li>
       <li className={s.item}>
-        <p className={s.itemName}>Neutral:</p>
-        <span className={s.count}>{neutral}</span>
-      </li>
-      <li className={s.item}>
-        <p className={s.itemName}>Bad:</p>
-        <span className={s.count}>{bad}</span>
-      </li>
-      <li className={s.item}>
-        <p className={s.itemName}>Total:</p>
-        <span className={s.count}>{total()}</span>
-      </li>
-      <li className={s.item}>
-        <p className={s.itemName}>Positive:</p>
-        <span className={s.count}>{persantageFeedback()} %</span>
+        Positive feedback:{" "}
+        <span className={`${s.count} `}>{persantageFeedback}%</span>
       </li>
     </ul>
   );
 };
 
 Statistics.propTypes = {
-  good: PropTypes.number.isRequired,
-  neutral: PropTypes.number.isRequired,
-  bad: PropTypes.number.isRequired,
-  total: PropTypes.func.isRequired,
-  persantageFeedback: PropTypes.func.isRequired,
+  options: PropTypes.object.isRequired,
+  total: PropTypes.number.isRequired,
+  persantageFeedback: PropTypes.number.isRequired,
 };
 export default Statistics;

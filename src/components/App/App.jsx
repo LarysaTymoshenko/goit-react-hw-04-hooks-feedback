@@ -38,9 +38,9 @@ export default function App() {
       <Section title="Statistics">
         {total > 0 ? (
           <Statistics
-            options={types}
+            options={{ good, neutral, bad }}
             total={total}
-            positivePercentage={positive}
+            persantageFeedback={positive}
           />
         ) : (
           <Notification message="There is no feedback!" />
