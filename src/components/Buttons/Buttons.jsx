@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import s from "./Buttons.css";
+import s from "./Buttons.module.css";
 
 const Buttons = ({ onIncrementFeedback, feedbackName }) => {
   return (
